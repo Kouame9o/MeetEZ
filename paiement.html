@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement - MeetEZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #28a745; /* Couleur verte */
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #343a40; /* Couleur gris foncé pour le texte */
+        }
+        .payment-method {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #343a40;
+            text-align: left;
+            padding-left: 20px;
+        }
+        .payment-method h2 {
+            margin: 0;
+            color: #007bff; /* Couleur bleue pour les sous-titres */
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #28a745; /* Couleur verte pour le bouton Valider */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+        .submit-button:hover {
+            background-color: #218838; /* Couleur verte plus foncée au survol */
+            transform: scale(1.05); /* Légère augmentation de la taille au survol */
+        }
+        .submit-button:active {
+            transform: scale(0.95); /* Réduction de la taille lors du clic */
+        }
+        .success-message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #28a745; /* Couleur verte pour le message de succès */
+        }
+        .back-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #6c757d; /* Couleur grise pour le bouton de retour */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .back-button:hover {
+            background-color: #5a6268; /* Couleur grise plus foncée au survol */
+            transform: scale(1.05); /* Légère augmentation de la taille au survol */
+        }
+        .back-button:active {
+            transform: scale(0.95); /* Réduction de la taille lors du clic */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Paiement</h1>
+        <p>Veuillez choisir l'un des numéros et faites le paiement :</p>
+        <div class="payment-method">
+            <h2>MTN MONEY</h2>
+            <p>+225 0554049897</p>
+            <h2>MOOV MONEY</h2>
+            <p>0140719995</p>
+            <h2>ORANGE MONEY</h2>
+            <p>0703037591</p>
+            <h2>WAVE CI</h2>
+            <p>0703037591</p>
+        </div>
+        <div class="form-group">
+            <label for="payment-number">Numéro de paiement :</label>
+            <input type="text" id="payment-number" name="payment-number">
+        </div>
+        <div class="form-group">
+            <label for="transaction-id">ID de transaction :</label>
+            <input type="text" id="transaction-id" name="transaction-id">
+        </div>
+        <div class="form-group">
+            <label for="payment-proof">Preuves de paiement :</label>
+            <input type="file" id="payment-proof" name="payment-proof">
+        </div>
+        <button class="submit-button" onclick="displaySuccessMessage()">Valider</button>
+        <div id="success-message" class="success-message" style="display: none;">
+            Paiement effectué avec succès
+        </div>
+        <a href="index.html" class="back-button">Retour</a>
+    </div>
+
+    <script>
+        function displaySuccessMessage() {
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetEZ - Parrainage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        h1 {
+            color: #28a745; /* Couleur verte */
+            margin: 0;
+        }
+        p {
+            font-size: 18px;
+            color: #343a40; /* Couleur gris foncé pour le texte */
+            margin: 20px 0;
+        }
+        .code-container {
+            margin: 20px 0;
+        }
+        .code-box {
+            display: inline-block;
+            padding: 10px;
+            font-size: 20px;
+            color: #ffffff;
+            background-color: #007bff; /* Couleur bleue pour le code */
+            border-radius: 5px;
+            user-select: none;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .code-box:hover {
+            background-color: #0056b3; /* Couleur bleue plus foncée au survol */
+        }
+        .copy-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #28a745; /* Couleur verte pour le bouton */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .copy-button:hover {
+            background-color: #218838; /* Couleur verte plus foncée au survol */
+        }
+        .copy-button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Code de Parrainage</h1>
+        <p>Utilisez le code ci-dessous pour bénéficier des avantages de parrainage :</p>
+        <div class="code-container">
+            <div id="code" class="code-box">64926WS</div>
+        </div>
+        <button class="copy-button" onclick="copyCode()">Copier le Code</button>
+    </div>
+    <script>
+        function copyCode() {
+            const code = document.getElementById('code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Code copié dans le presse-papiers !');
+            }).catch(err => {
+                alert('Erreur lors de la copie du code.');
+            });
+        }
+    </script>
+</body>
+</html>

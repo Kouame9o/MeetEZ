@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription/Connexion - MeetEZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            margin: auto;
+            flex: 1;
+        }
+        h1 {
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .toggle-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .toggle-buttons button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .toggle-buttons button.active {
+            background-color: #0056b3;
+        }
+        .form-container {
+            display: none;
+        }
+        .form-container.active {
+            display: block;
+        }
+        .message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .service-client {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .service-client:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function toggleForm(formType) {
+            document.getElementById('inscription').classList.toggle('active', formType === 'inscription');
+            document.getElementById('connexion').classList.toggle('active', formType === 'connexion');
+            document.getElementById('inscriptionButton').classList.toggle('active', formType === 'inscription');
+            document.getElementById('connexionButton').classList.toggle('active', formType === 'connexion');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent form submission for demo purposes
+            // Redirect to index.html after successful submission
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>MeetEZ</h1>
+        <div class="toggle-buttons">
+            <button id="inscriptionButton" class="active" onclick="toggleForm('inscription')">Inscription</button>
+            <button id="connexionButton" onclick="toggleForm('connexion')">Connexion</button>
+        </div>
+        <div id="inscription" class="form-container active">
+            <form onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="nomPrenom">Nom et prénom</label>
+                    <input type="text" id="nomPrenom" name="nomPrenom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email MeetEZ</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="motDePasse">Mode de passe</label>
+                    <input type="password" id="motDePasse" name="motDePasse" required>
+                </div>
+                <div class="form-group">
+                    <label for="codeParrainage">Code de parrainage</label>
+                    <input type="text" id="codeParrainage" name="codeParrainage">
+                </div>
+                <div class="form-group">
+                    <button type="submit">S'inscrire</button>
+                </div>
+                <div class="message">
+                    Inscription réussie ! Vous allez être redirigé vers la page d'accueil.
+                </div>
+            </form>
+        </div>
+        <div id="connexion" class="form-container">
+            <form onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="connexionEmail">Email MeetEZ</label>
+                    <input type="email" id="connexionEmail" name="connexionEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="connexionMotDePasse">Mode de passe</label>
+                    <input type="password" id="connexionMotDePasse" name="connexionMotDePasse" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Se connecter</button>
+                </div>
+                <div class="message">
+                    Connexion réussie ! Vous allez être redirigé vers la page d'accueil.
+                </div>
+            </form>
+        </div>
+    </div>
+    <a href="https://t.me/MeetEZservice" class="service-client" title="Service Client">🎧</a>
+</body>
+</html>

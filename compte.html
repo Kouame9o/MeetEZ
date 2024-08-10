@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon compte - MeetEZ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .account-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+        h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        .balance-container {
+            margin-bottom: 20px;
+        }
+        .balance {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #007bff;
+        }
+        .label {
+            font-size: 16px;
+            color: #6c757d;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="account-container">
+        <h2>Mon compte</h2>
+
+        <div class="balance-container">
+            <p class="label">Solde d'activation</p>
+            <p class="balance">00 FCFA</p>
+        </div>
+        
+        <div class="balance-container">
+            <p class="label">Solde principal</p>
+            <p class="balance">00 FCFA</p>
+        </div>
+
+        <a href="retrait.html" class="button">Effectuer un retrait</a>
+    </div>
+</body>
+</html>

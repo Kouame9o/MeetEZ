@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge - MeetEZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #28a745; /* Couleur verte */
+            margin-bottom: 20px;
+        }
+        .amount-button {
+            display: block;
+            margin: 10px auto;
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #007bff; /* Couleur bleue pour les boutons */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+            max-width: 250px;
+        }
+        .amount-button:hover {
+            background-color: #0056b3; /* Couleur bleue plus foncée au survol */
+            transform: scale(1.05); /* Légère augmentation de la taille au survol */
+        }
+        .amount-button:active {
+            transform: scale(0.95); /* Réduction de la taille lors du clic */
+        }
+        .back-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #6c757d; /* Couleur grise pour le bouton de retour */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+            max-width: 250px;
+        }
+        .back-button:hover {
+            background-color: #5a6268; /* Couleur grise plus foncée au survol */
+            transform: scale(1.05); /* Légère augmentation de la taille au survol */
+        }
+        .back-button:active {
+            transform: scale(0.95); /* Réduction de la taille lors du clic */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Veuillez choisir les montants à recharger</h1>
+        <a href="paiement.html?amount=6000" class="amount-button">6.000 FCFA</a>
+        <a href="paiement.html?amount=8500" class="amount-button">8.500 FCFA</a>
+        <a href="paiement.html?amount=10500" class="amount-button">10.500 FCFA</a>
+        <a href="paiement.html?amount=15500" class="amount-button">15.500 FCFA</a>
+        <a href="paiement.html?amount=25000" class="amount-button">25.000 FCFA</a>
+        <a href="paiement.html?amount=35000" class="amount-button">35.000 FCFA</a>
+        <a href="paiement.html?amount=45000" class="amount-button">45.000 FCFA</a>
+        <a href="paiement.html?amount=55000" class="amount-button">55.000 FCFA</a>
+        <a href="paiement.html?amount=80000" class="amount-button">80.000 FCFA</a>
+        <a href="paiement.html?amount=100000" class="amount-button">100.000 FCFA</a>
+        <a href="index.html" class="back-button">Retour</a>
+    </div>
+</body>
+</html>

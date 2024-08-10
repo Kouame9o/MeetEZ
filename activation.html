@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activation - MeetEZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+        .activation-container {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        h2 {
+            color: #343a40;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 10px 0;
+            color: #6c757d;
+            font-size: 16px;
+        }
+        .activate-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .activate-button:hover {
+            background-color: #c82333;
+        }
+        .message-insufficient {
+            color: red;
+            font-weight: bold;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Activation de votre compte</h2>
+
+    <div class="activation-container">
+        <h3>Stade 1 | 6.000 FCFA</h3>
+        <p>400 FCFA | 5 photos | Revenus quotidiens : 2.000 FCFA | Cycle : 10 jours | Revenus totaux : 20.000 FCFA</p>
+        <button class="activate-button" onclick="showMessage('message-stade1')">Activer le Stade 1</button>
+        <p id="message-stade1" class="message-insufficient">Solde insuffisant pour l'activation du Stade 1.</p>
+    </div>
+
+    <div class="activation-container">
+        <h3>Stade 2 | 8.500 FCFA</h3>
+        <p>800 FCFA | 5 photos | Revenus quotidiens : 4.000 FCFA | Cycle : 8 jours</p>
+        <button class="activate-button" onclick="showMessage('message-stade2')">Activer le Stade 2</button>
+        <p id="message-stade2" class="message-insufficient">Solde insuffisant pour l'activation du Stade 2.</p>
+    </div>
+
+    <div class="activation-container">
+        <h3>Stade 3 | 10.500 FCFA</h3>
+        <p>1.200 FCFA | 5 photos | Revenus quotidiens : 6.000 FCFA | Cycle : 7 jours | Revenus totaux : 42.000 FCFA</p>
+        <button class="activate-button" onclick="showMessage('message-stade3')">Activer le Stade 3</button>
+        <p id="message-stade3" class="message-insufficient">Solde insuffisant pour l'activation du Stade 3.</p>
+    </div>
+
+    <div class="activation-container">
+        <h3>Stade 4 | 15.500 FCFA</h3>
+        <p>1.400 FCFA | 5 photos | Revenus quotidiens : 7.000 FCFA | Cycle : 7 jours | Revenus totaux : 49.000 FCFA</p>
+        <button class="activate-button" onclick="showMessage('message-stade4')">Activer le Stade 4</button>
+        <p id="message-stade4" class="message-insufficient">Solde insuffisant pour l'activation du Stade 4.</p>
+    </div>
+
+    <div class="activation-container">
+        <h3>Stade 5 | 25.000 FCFA</h3>
+        <p>1.800 FCFA | 5 photos | Revenus quotidiens : 9.000 FCFA | Cycle : 6 jours | Revenus totaux : 54.000 FCFA</p>
+        <button class="activate-button" onclick="showMessage('message-stade5')">Activer le Stade 5</button>
+        <p id="message-stade5" class="message-insufficient">Solde insuffisant pour l'activation du Stade 5.</p>
+    </div>
+
+    <div class="activation-container">
+        <h3>Stade 6 | 35.000 FCFA</h3>
+        <p>10.000 FCFA | 2 photos | Revenus quotidiens : 20.000 FCFA | Cycle : 3 jours | Revenus totaux : 60.000 FCFA</p>
+        <button class="activate-button" onclick="showMessage('message-stade6')">Activer le Stade 6</button>
+        <p id="message-stade6" class="message-insufficient">Solde insuffisant pour l'activation du Stade 6.</p>
+    </div>
+
+    <div class="activation-container">
+        <h3>Stade 7 | 45.000 FCFA</h3>
+        <p>11.000 FCFA | 2 photos | Revenus quotidiens : 22.000 FCFA | Cycle : 4 jours | Revenus totaux : 88.000 FCFA</p>
+        <button class="activate-button" onclick="showMessage('message-stade7')">Activer le Stade 7</button>
+        <p id="message-stade7" class="message-insufficient">Solde insuffisant pour l'activation du Stade 7.</p>
+    </div>
+
+    <div class="activation-container">
+        <h3>Stade 8 | 55.000 FCFA</h3>
+        <p>12.000 FCFA | 5 photos | Revenus quotidiens : 24.000 FCFA | Cycle : 5 jours | Revenus totaux : 120.000 FCFA</p>
+        <button class="activate-button" onclick="showMessage('message-stade8')">Activer le Stade 8</button>
+        <p id="message-stade8" class="message-insufficient">Solde insuffisant pour l'activation du Stade 8.</p>
+    </div>
+
+    <div class="activation-container">
+        <h3>Stade 9 | 80.000 FCFA</h3>
+        <p>14.000 FCFA | 5 photos | Revenus quotidiens : 42.000 FCFA | Cycle : 4 jours | Revenus totaux : 168.000 FCFA</p>
+        <button class="activate-button" onclick="showMessage('message-stade9')">Activer le Stade 9</button>
+        <p id="message-stade9" class="message-insufficient">Solde insuffisant pour l'activation du Stade 9.</p>
+    </div>
+
+    <div class="activation-container">
+        <h3>Stade 10 | 100.000 FCFA</h3>
+        <p>15.000 FCFA | 3 photos | Revenus quotidiens : 45.000 FCFA | Cycle : 5 jours | Revenus totaux : 225.000 FCFA</p>
+        <button class="activate-button" onclick="showMessage('message-stade10')">Activer le Stade 10</button>
+        <p id="message-stade10" class="message-insufficient">Solde insuffisant pour l'activation du Stade 10.</p>
+    </div>
+
+    <script>
+        function showMessage(messageId) {
+            // Cache tous les messages d'erreur
+            const messages = document.querySelectorAll('.message-insufficient');
+            messages.forEach(message => message.style.display = 'none');
+
+            // Affiche le message d'erreur spécifique
+            const message = document.getElementById(messageId);
+            if (message) {
+                message.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
